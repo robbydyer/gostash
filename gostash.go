@@ -2,25 +2,9 @@ package gostash
 
 import (
     "fmt"
-    "net"
     "os"
-    "time"
-    "regexp"
-"github.com/mattbaird/elastigo/api"
-"github.com/mattbaird/elastigo/core"
+    "strings"
 )
-
-
-type Gostash struct {
-  Host  string
-  Port  int
-  Index_prefix  string
-  Write_file  string
-  Start string
-  End string
-  Query String
-  Tags  String
-}
 
 func validateTimestamp (stamp string) bool {
   const stamp_regex = "20[0-9]{2}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T[012][0-9]:[0-5][0-9]:[0-5][0-9]\.[0-9]{3}Z"
